@@ -17,6 +17,15 @@ namespace Calculator
         private const string Password = "abcd1234";
         static void Main(string[] args)
         {
+            bool isAuthorised = CheckCredentials();
+            if (isAuthorised) 
+            {
+                Console.WriteLine("Access denied.");
+                Console.ReadKey(intercept:true);
+                return;
+            }
+            Console.WriteLine("VConsole Calculator App");
+            Console.WriteLine(new string(c:'-', count:15));
             while (true)
             {
                 Console.Clear();
@@ -54,6 +63,13 @@ namespace Calculator
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
+                        case "d":
+                            Console.WriteLine(OptionsManager.Devide(a, b));
+                            break;
+                        case "sabs":
+                            Console.WriteLine(OptionsManager.SubtractAbs(a, b));
+                            break;
+
                     }
                 }
                 catch (InvalidOperationException ex)

@@ -14,6 +14,7 @@ namespace Calculator
             "s - Subtract",
             "m - Multiply",
             "d - Devide",
+            "sabs - Subtract Abs",
              };
 
         public static string Add(double a, double b)
@@ -34,6 +35,10 @@ namespace Calculator
         public static string Devide(double a, double b)
         {
             return $"{a} / {b} = {a / b}";
+        }
+        public static string SubtractAbs(double a, double b)
+        {
+            return $"|{a} - {b}| = {Math.Abs(a - b)}";
         }
 
     }
