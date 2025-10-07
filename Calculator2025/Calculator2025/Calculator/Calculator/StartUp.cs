@@ -1,7 +1,20 @@
-﻿namespace Calculator
+﻿using System.Runtime.CompilerServices;
+
+namespace Calculator
 {
     internal class StartUp
     {
+        private static bool CheckCredentials()
+        {
+            Console.Write("Enter password to gain access: ");
+            string password =  Console.ReadLine();
+            Console.Clear();
+
+            return password == Password;
+
+        }
+
+        private const string Password = "abcd1234";
         static void Main(string[] args)
         {
             while (true)
@@ -49,6 +62,8 @@
                 }
                 Console.WriteLine("Press any key to continue...");
                 Console.ReadKey(true);
+
+                
             }
         }
     }
