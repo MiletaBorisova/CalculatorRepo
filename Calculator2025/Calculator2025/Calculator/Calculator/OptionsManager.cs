@@ -13,6 +13,7 @@ namespace Calculator
             "a - Add",
             "s - Subtract",
             "m - Multiply",
+            "d - Devide",
              };
 
         public static string Add(double a, double b)
@@ -28,6 +29,11 @@ namespace Calculator
         public static string Subtract(double a, double b)
         {
             return $"{a} - {b} = {a - b}";
+        }
+
+        public static string Devide(double a, double b)
+        {
+            return $"{a} / {b} = {a / b}";
         }
 
     }
