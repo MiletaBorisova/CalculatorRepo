@@ -41,6 +41,14 @@
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
+                        case "dr":
+                            Console.WriteLine(OptionsManager.DivideRemainder(a, b));
+                            break;
+                        case "ex":
+                            Console.Clear();
+                            Console.WriteLine("Goodbye");
+                            Console.ReadKey(true);
+                            return;
                     }
                 }
                 catch (InvalidOperationException ex)

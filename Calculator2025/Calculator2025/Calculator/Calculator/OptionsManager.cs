@@ -13,6 +13,7 @@ namespace Calculator
             "a - Add",
             "s - Subtract",
             "m - Multiply",
+            "dr - Devide Remainder"
              };
 
         public static string Add(double a, double b)
@@ -28,6 +29,11 @@ namespace Calculator
         public static string Subtract(double a, double b)
         {
             return $"{a} - {b} = {a - b}";
+        }
+
+        public static void DevideRemainder(double a, double b)
+        {
+            Console.WriteLine($"{a} % {b} = {a % b}");
         }
 
     }
