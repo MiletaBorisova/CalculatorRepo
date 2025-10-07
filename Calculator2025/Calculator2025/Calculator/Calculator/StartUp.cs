@@ -41,6 +41,15 @@
                         case "m":
                             Console.WriteLine(OptionsManager.Multiply(a, b));
                             break;
+                        case "pow":
+                            OptionsManager.Power(a, b);
+                            break;
+                        case "log":
+                            OptionsManager.Log(a, b);
+                            break;
+                        case "fact":
+                            OptionsManager.Factorial(a, b);
+                            break;
                     }
                 }
                 catch (InvalidOperationException ex)
